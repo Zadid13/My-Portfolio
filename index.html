@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talukder Hasnat Zadid — AI/ML Researcher</title>
+<meta name="description" content="Talukder Hasnat Zadid — AI/ML researcher working on explainable AI, multimodal deep learning, Bangla NLP, and medical imaging. Final-year CSE student at AIUB.">
+<meta property="og:title" content="Talukder Hasnat Zadid — AI/ML Researcher">
+<meta property="og:description" content="Explainable AI · Multimodal Deep Learning · Bangla NLP · Medical Imaging">
+<meta property="og:image" content="assets/profile.jpg">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Bengali:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1525;
+    --ink-text:#161D2B;
+    --paper:#F3F2ED;
+    --card:#FFFFFF;
+    --muted:#5C6470;
+    --line:rgba(14,21,37,0.12);
+    --line-soft:rgba(243,242,237,0.16);
+    --teal:#16B3A6;
+    --rose:#FF3D68;
+    --grad:linear-gradient(90deg,var(--teal),var(--rose));
+    --maxw:1080px;
+    --display:'Fraunces',serif;
+    --body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    --mono:'IBM Plex Mono',monospace;
+    --bn:'Noto Sans Bengali',sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink-text);
+    font-family:var(--body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  section{padding:96px 0;}
+  @media (max-width:680px){ section{padding:64px 0;} .wrap{padding:0 20px;} }
+
+  .skip-link{
+    position:absolute;left:-999px;top:0;background:var(--rose);color:#fff;
+    padding:8px 14px;z-index:200;font-family:var(--mono);font-size:13px;
+  }
+  .skip-link:focus{left:12px;top:12px;}
+
+  :focus-visible{outline:2px solid var(--rose);outline-offset:3px;}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .eyebrow .dot{color:var(--rose);}
+
+  h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;letter-spacing:-0.01em;}
+
+  .hl{
+    background-image:var(--grad);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(14,21,37,0.78);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:0 28px;
+    display:flex;align-items:center;justify-content:space-between;height:64px;
+  }
+  .nav-mark{
+    font-family:var(--mono);font-size:13px;color:#F3F2ED;letter-spacing:.06em;
+  }
+  .nav-mark b{color:var(--rose);}
+  .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+  .nav-links a{
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:#C9CBD4;padding:6px 0;border-bottom:1px solid transparent;transition:.2s;
+  }
+  .nav-links a:hover, .nav-links a:focus-visible{color:#fff;border-bottom-color:var(--rose);}
+  .nav-toggle{display:none;background:none;border:none;color:#fff;font-size:22px;cursor:pointer;}
+  @media (max-width:720px){
+    .nav-links{
+      position:fixed;inset:64px 0 0 0;background:var(--ink);
+      flex-direction:column;align-items:flex-start;gap:0;padding:8px 28px;
+      transform:translateY(-110%);transition:transform .25s ease;
+    }
+    .nav-links.open{transform:translateY(0);}
+    .nav-links a{display:block;width:100%;padding:14px 0;border-bottom:1px solid var(--line-soft);}
+    .nav-toggle{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--ink);color:#F3F2ED;
+    padding:168px 0 110px;position:relative;overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(480px 320px at 82% 12%, rgba(255,61,104,0.20), transparent 70%),
+      radial-gradient(520px 360px at 8% 92%, rgba(22,179,166,0.18), transparent 70%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:1;}
+  .hero h1{
+    font-size:clamp(40px,7vw,76px);
+    line-height:1.03;
+    margin-top:18px;
+  }
+  .bn-name{font-family:var(--bn);font-size:15px;color:#9499A6;margin-top:10px;letter-spacing:.02em;}
+  .hero-sub{
+    font-size:clamp(17px,2.4vw,21px);
+    max-width:640px;margin-top:24px;color:#D7D9E0;font-weight:400;
+  }
+  .hero-bio{max-width:560px;color:#9499A6;margin-top:18px;font-size:15px;}
+  .hero-cta{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap;}
+  .btn{
+    font-family:var(--mono);font-size:13px;letter-spacing:.04em;
+    padding:13px 22px;border-radius:2px;border:1px solid var(--line-soft);
+    transition:.2s;display:inline-block;
+  }
+  .btn-primary{background:var(--grad);color:#0E1525;border:none;font-weight:500;}
+  .btn-primary:hover{filter:brightness(1.08);}
+  .btn-ghost{color:#F3F2ED;}
+  .btn-ghost:hover{border-color:#F3F2ED;}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .sec-head{margin-bottom:44px;max-width:620px;}
+  .sec-head h2{font-size:clamp(28px,4vw,38px);margin-top:10px;}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:15.5px;}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:220px 1fr;gap:56px;align-items:start;}
+  @media (max-width:720px){.about-grid{grid-template-columns:1fr;}}
+  .portrait-ring{
+    width:180px;height:180px;border-radius:50%;
+    background:conic-gradient(from 0deg, var(--teal), var(--rose), var(--teal));
+    padding:5px;animation:spin 32s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce){ .portrait-ring{animation:none;} }
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .portrait-ring img{border-radius:50%;border:4px solid var(--paper);width:100%;height:100%;object-fit:cover;}
+  .about-text p{margin:0 0 16px;color:var(--ink-text);}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .chip{
+    font-family:var(--mono);font-size:12px;padding:7px 12px;border:1px solid var(--line);
+    border-radius:2px;color:var(--ink-text);background:var(--card);
+  }
+  .quickfacts{
+    margin-top:28px;padding-top:20px;border-top:1px solid var(--line);
+    font-family:var(--mono);font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:18px;
+  }
+
+  /* ---------- LEDGER (experience / publications) ---------- */
+  .ledger-row{
+    display:grid;grid-template-columns:200px 1fr;gap:32px;
+    padding:26px 0;border-top:1px solid var(--line);
+  }
+  .ledger-row:last-child{border-bottom:1px solid var(--line);}
+  @media (max-width:680px){ .ledger-row{grid-template-columns:1fr;gap:8px;} }
+  .ledger-meta{font-family:var(--mono);font-size:12.5px;color:var(--muted);line-height:1.7;}
+  .ledger-meta .org{display:block;color:var(--ink-text);font-weight:500;margin-top:4px;font-family:var(--body);font-size:14.5px;}
+  .ledger-body h3{font-size:18px;font-weight:600;font-family:var(--body);}
+  .ledger-body ul{margin:10px 0 0;padding-left:18px;color:var(--ink-text);font-size:15px;}
+  .ledger-body li{margin-bottom:6px;}
+  .tag-row{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;}
+  .tag{
+    font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;
+    padding:3px 8px;border-radius:2px;
+  }
+  .tag-dataset{background:rgba(22,179,166,0.12);color:#0E847A;}
+  .tag-journal{background:rgba(255,61,104,0.12);color:#C81E45;}
+  .tag-conference{background:rgba(14,21,37,0.08);color:var(--ink-text);}
+  .tag-preprint{background:rgba(214,165,60,0.16);color:#8A6111;}
+  .tag-review{background:rgba(92,100,112,0.12);color:var(--muted);}
+
+  /* ---------- RESEARCH FOCUS CARDS ---------- */
+  .focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media (max-width:680px){.focus-grid{grid-template-columns:1fr;}}
+  .focus-card{background:var(--card);padding:30px;}
+  .focus-card .num{font-family:var(--mono);font-size:12px;color:var(--rose);}
+  .focus-card h3{font-size:19px;margin-top:10px;font-family:var(--body);font-weight:600;}
+  .focus-card p{color:var(--muted);font-size:14.5px;margin-top:10px;}
+
+  /* ---------- PUBLICATIONS LIST ---------- */
+  .pub-row{padding:22px 0;border-top:1px solid var(--line);}
+  .pub-row:last-child{border-bottom:1px solid var(--line);}
+  .pub-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;}
+  .pub-year{font-family:var(--mono);font-size:12.5px;color:var(--muted);min-width:48px;}
+  .pub-title{font-size:16px;font-weight:600;flex:1;}
+  .pub-venue{font-size:13.5px;color:var(--muted);margin-top:6px;}
+  .pub-link{font-family:var(--mono);font-size:12px;color:var(--teal);border-bottom:1px solid currentColor;}
+
+  /* ---------- HONOURS ---------- */
+  .honour-row{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-top:1px solid var(--line);flex-wrap:wrap;}
+  .honour-row:last-child{border-bottom:1px solid var(--line);}
+  .honour-date{font-family:var(--mono);font-size:12.5px;color:var(--muted);min-width:90px;}
+  .honour-link{font-family:var(--mono);font-size:12px;color:var(--teal);border-bottom:1px solid currentColor;white-space:nowrap;}
+
+  /* ---------- SKILLS ---------- */
+  .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px;}
+  @media (max-width:680px){.skill-grid{grid-template-columns:1fr;}}
+  .skill-group .eyebrow{margin-bottom:14px;display:block;}
+  .skill-group .chips{margin-top:0;}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media (max-width:880px){.testi-grid{grid-template-columns:1fr;}}
+  .testi-card{background:var(--card);padding:28px;display:flex;flex-direction:column;height:100%;}
+  .testi-card p.quote{font-size:14.5px;color:var(--ink-text);flex:1;}
+  .testi-card .by{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;}
+  .testi-card .by b{display:block;font-size:14px;}
+  .testi-card .by span{color:var(--muted);font-size:12.5px;}
+
+  /* ---------- VOLUNTEERING ---------- */
+  .vol-list{list-style:none;padding:0;margin:0;display:grid;gap:10px;}
+  .vol-list li{font-size:14.5px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:10px;}
+  .vol-list li:first-child{border-top:none;padding-top:0;}
+  .vol-list .role{color:var(--muted);font-size:13px;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--ink);color:#F3F2ED;}
+  .contact .eyebrow{color:#9499A6;}
+  .contact h2{color:#fff;}
+  .contact-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-top:36px;}
+  .contact-links{display:flex;flex-direction:column;gap:16px;}
+  .contact-links a, .contact-links span{font-family:var(--mono);font-size:15px;}
+  .contact-links a{border-bottom:1px solid var(--line-soft);padding-bottom:2px;width:max-content;}
+  .contact-links a:hover{border-color:var(--rose);}
+  .contact-note{max-width:320px;color:#9499A6;font-size:13.5px;}
+
+  footer{padding:26px 0;background:var(--ink);border-top:1px solid var(--line-soft);}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  footer{color:#71768A;font-family:var(--mono);font-size:12px;}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark">ZADID<b>.</b>AI</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">AI / ML Researcher <span class="dot">·</span> Dhaka, Bangladesh</p>
+      <h1>Talukder Hasnat<br>Zadid</h1>
+      <p class="bn-name">তালুকদার হাসনাত জাদিদ</p>
+      <p class="hero-sub">Building <span class="hl">explainable</span>, <span class="hl">multimodal AI</span> — from Bangla language models to biomedical imaging.</p>
+      <p class="hero-bio">Final-year Computer Science &amp; Engineering student researching explainable AI, multimodal deep learning, and low-resource NLP. Author of 9 publications and open datasets spanning Bangla commonsense reasoning, medical imaging, and LLM-driven biomedical forecasting.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#publications">See research →</a>
+        <a class="btn btn-ghost" href="#work">View experience</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="portrait-ring">
+        <img src="assets/profile.jpg" alt="Portrait of Talukder Hasnat Zadid">
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">About</p>
+        <p style="margin-top:14px;">I'm a final-year CSE student at <strong>American International University-Bangladesh</strong>, working at the intersection of explainable AI, multimodal deep learning, and low-resource language processing.</p>
+        <p>My research spans Bangla NLP and commonsense reasoning, medical-imaging classification, biomedical forecasting with large language models, and sustainable computing — usually with SHAP, LIME, or Grad-CAM doing the explaining. I currently split my time between Elite Research Lab (New York, remote) and Learnify Research Lab (Dhaka), building datasets, baselines, and reproducible pipelines that other researchers can actually use.</p>
+        <div class="chips">
+          <span class="chip">Explainable AI (XAI)</span>
+          <span class="chip">Multimodal Deep Learning</span>
+          <span class="chip">Bangla NLP</span>
+          <span class="chip">Medical Imaging</span>
+          <span class="chip">Dataset Curation</span>
+          <span class="chip">Sustainable Computing</span>
+        </div>
+        <div class="quickfacts">
+          <span>EQF Level 6</span>
+          <span>Best Thesis Poster Award, 2025</span>
+          <span>9 publications &amp; datasets</span>
+          <span>English — C2</span>
+          <span>Bengali — native</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="background:var(--card);">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Experience</p>
+        <h2>Research &amp; industry roles</h2>
+        <p>Two parallel research appointments alongside earlier industry and internship work.</p>
+      </div>
+
+      <div class="ledger-row">
+        <div class="ledger-meta">Jan 2026 — Present<span class="org">Elite Research Lab LLC</span>Remote · New York, US</div>
+        <div class="ledger-body">
+          <h3>Research Assistant</h3>
+          <ul>
+            <li>Supports experiments end-to-end: data preparation, baseline modeling, and lightweight tool integrations.</li>
+            <li>Co-author on an EACL 2026 Student Research Workshop (Core A) submission benchmarking LLM biomedical predictions — BioGPT and FLAN-T5 — against historical evidence, covering mRNA vaccines, anti-amyloid antibodies, and CRISPR-Cas9 therapy.</li>
+            <li>Currently drafting one Q1 journal paper and two conference papers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ledger-row">
+        <div class="ledger-meta">Mar 2025 — Present<span class="org">Learnify Research Lab</span>Dhaka, Bangladesh</div>
+        <div class="ledger-body">
+          <h3>Research Trainee</h3>
+          <ul>
+            <li>Designs and curates datasets for computer vision and sustainable computing — exocentric hand-interaction imagery, synthetic fire/non-fire scenes, and medicinal plant leaves from Bangladesh.</li>
+            <li>First author on five published datasets and papers, with further work under review at Q1 journals.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ledger-row">
+        <div class="ledger-meta">Jan 2023 — Present<span class="org">Quantigo AI</span>Dhaka, Bangladesh</div>
+        <div class="ledger-body">
+          <h3>Data Annotator</h3>
+          <ul>
+            <li>Annotates and validates large-scale ML training datasets, maintaining labeling standards, data integrity, and ethical handling of sensitive information.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ledger-row">
+        <div class="ledger-meta">Nov — Dec 2023<span class="org">NeuroNexus Innovations</span>Kolkata, India</div>
+        <div class="ledger-body">
+          <h3>C++ Programming Intern</h3>
+          <ul>
+            <li>Implemented project modules in C++ remotely, applying algorithmic problem-solving against technical requirements and deadlines.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ledger-row">
+        <div class="ledger-meta">Nov 2022 — Mar 2023<span class="org">Youth School for Social Entrepreneurs</span>Dhaka, Bangladesh</div>
+        <div class="ledger-body">
+          <h3>Operations Management Intern</h3>
+          <ul>
+            <li>Managed and coordinated 40+ interns and reporting workflows; produced weekly visual reports in Canva.</li>
+            <li>Recognized as <strong>Best Intern of the Month</strong> and ranked #2 overall for performance.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Research Focus</p>
+        <h2>What I keep coming back to</h2>
+        <p>Four threads run through most of my work, regardless of which dataset or domain it's applied to.</p>
+      </div>
+      <div class="focus-grid">
+        <div class="focus-card">
+          <p class="num">01</p>
+          <h3>Explainable AI</h3>
+          <p>Using SHAP, LIME, and Grad-CAM to make deep models — from Bangla commonsense reasoning to chest X-ray classifiers — show their reasoning, not just their predictions.</p>
+        </div>
+        <div class="focus-card">
+          <p class="num">02</p>
+          <h3>Multimodal Deep Learning</h3>
+          <p>Fusing vision, text, and tabular signals for tasks spanning hand-gesture recognition, fire detection, and medical image analysis.</p>
+        </div>
+        <div class="focus-card">
+          <p class="num">03</p>
+          <h3>Bangla &amp; Low-Resource NLP</h3>
+          <p>Building datasets and benchmarks — including XCommonsense-BN and Bangladesh-focused misinformation detection — for one of the world's most under-served major languages.</p>
+        </div>
+        <div class="focus-card">
+          <p class="num">04</p>
+          <h3>LLMs for Biomedical Reasoning</h3>
+          <p>Benchmarking models like BioGPT and FLAN-T5 against decades of real biomedical evidence, from mRNA vaccines to CRISPR-Cas9 therapy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications" style="background:var(--card);">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Publications &amp; Datasets</p>
+        <h2>Selected research output</h2>
+        <p>Journal articles, conference papers, open datasets, and work currently under review.</p>
+      </div>
+
+      <div class="pub-row">
+        <div class="pub-top">
+          <span class="pub-year">2026</span>
+          <span class="pub-title">A review of fairness challenges in natural language processing</span>
+        </div>
+        <p class="pub-venue">Array, Vol. 30 (Elsevier) · with S. M. Jahin, A. R. Dhruba, S. A. Tanim, A. M. Hamja, M. R. Hasan, M. S. U. Miah, M. I. Islam, A. Al Mansur</p>
+        <span class="tag tag-journal" style="margin-top:8px;display:inline-block;">Journal</span>
+      </div>
+
+      <div class="pub-row">
+        <div class="pub-top">
+          <span class="pub-year">In review</span>
+          <span class="pub-title">Simulating Forecasting Fidelity: A Multi-Agent Framework for Benchmarking LLM Biomedical Predictions Against Historical Evidence</span>
+        </div>
+        <p class="pub-venue">EACL 2026 Student Research Workshop (Core A-rank)</p>
+        <span class="tag tag-review" style="margin-top:8px;display:inline-block;">In review</span>
+      </div>
+
+      <div class="pub-row">
+        <div class="pub-top">
+          <span class="pub-year">2025</span>
+          <span class="pub-title">A dataset of exocentric images capturing hand gestures in multiplayer games</span>
+        </div>
+        <p class="pub-venue">Data in Brief, Vol. 63, 112182 (Elsevier) · with S. A. Tanim, M. F. Mridha — <a class="pub-link" href="https://doi.org/10.1016/j.dib.2025.112182" target="_blank" rel="noopener">doi.org/10.1016/j.dib.2025.112182 ↗</a></p>
+        <span class="tag tag-dataset" style="margin-top:8px;display:inline-block;">Dataset</span>
+      </div>
+
+      <div class="pub-row">
+        <div class="pub-top">
+          <span class="pub-year">2025</span>
+          <span class="pub-title">Exocentric View Hand Interaction Dataset</span>
+        </div>
+        <p class="pub-venue"><a class="pub-link" href="https://doi.org/10.17632/9D37M3NFGM.2" target="_blank" rel="noopener">doi.org/10.17632/9D37M3NFGM.2 ↗</a></p>
+        <span class="tag tag-dataset" style="margin-top:8px;display:inline-block;">Dataset</span>
+      </div>
+
+      <div class="pub-row">
+        <div class="pub-top">
+          <span class="pub-year">2025</span>
+          <span class="pub-title">A Medicinal Plant Leaf Image Dataset from Bangladesh for Deep Learning-Based Recognition</span>
+        </div>
+        <p class="pub-venue"><a class="pub-link" href="https://doi.org/10.17632/WTXNMTVMW7.3" target="_blank" rel="noopener">doi.org/10.17632/WTXNMTVMW7.3 ↗</a></p>
+        <span class="tag tag-dataset" style="margin-top:8px;display:inline-block;">Dataset</span>
+      </div>
+
+      <div class="pub-row">
+        <div class="pub-top">
+          <span class="pub-year">2025</span>
+          <span class="pub-title">Synthetic Image Fire and Non-Fire Dataset</span>
+        </div>
+        <p class="pub-venue"><a class="pub-link" href="https://doi.org/10.17632/MX33VRMXRV.1" target="_blank" rel="noopener">doi.org/10.17632/MX33VRMXRV.1 ↗</a></p>
+        <span class="tag tag-dataset" style="margin-top:8px;display:inline-block;">Dataset</span>
+      </div>
+
+      <div class="pub-row">
+        <div class="pub-top">
+          <span class="pub-year">2025</span>
+          <span class="pub-title">XCommonsense-BN: Bangla Multiple-Choice Commonsense Reasoning Dataset</span>
+        </div>
+        <p class="pub-venue"><a class="pub-link" href="https://doi.org/10.17632/CWZV55WTVF.1" target="_blank" rel="noopener">doi.org/10.17632/CWZV55WTVF.1 ↗</a></p>
+        <span class="tag tag-dataset" style="margin-top:8px;display:inline-block;">Dataset</span>
+      </div>
+
+      <div class="pub-row">
+        <div class="pub-top">
+          <span class="pub-year">2025</span>
+          <span class="pub-title">Mapping Social Media Misinformation in Bangladesh: Evidence from the FactWatch Dataset</span>
+        </div>
+        <p class="pub-venue">ICCTASS 2025 (Atlantis Press / Springer Nature)</p>
+        <span class="tag tag-conference" style="margin-top:8px;display:inline-block;">Conference</span>
+      </div>
+
+      <div class="pub-row">
+        <div class="pub-top">
+          <span class="pub-year">2025</span>
+          <span class="pub-title">Rethinking Green AI for Sustainable Computing</span>
+        </div>
+        <p class="pub-venue">Preprint — <a class="pub-link" href="https://doi.org/10.2139/ssrn.5367962" target="_blank" rel="noopener">doi.org/10.2139/ssrn.5367962 ↗</a></p>
+        <span class="tag tag-preprint" style="margin-top:8px;display:inline-block;">Preprint</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="honours">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Honours &amp; Awards</p>
+        <h2>Recognition</h2>
+      </div>
+      <div class="honour-row">
+        <div>
+          <strong>Best Thesis Poster Award</strong>
+          <div style="color:var(--muted);font-size:13.5px;margin-top:2px;">American International University-Bangladesh</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <span class="honour-date">Dec 2025</span>
+          <a class="honour-link" href="https://drive.google.com/file/d/1Kg-92PWwLx-zZ5EHl2e_2pn2Cj2wEUxv/view?usp=sharing" target="_blank" rel="noopener">View ↗</a>
+        </div>
+      </div>
+      <div class="honour-row">
+        <div>
+          <strong>Honorable Mention</strong>
+          <div style="color:var(--muted);font-size:13.5px;margin-top:2px;">International Collegiate Programming Contest</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <span class="honour-date">Oct 2023</span>
+          <a class="honour-link" href="https://drive.google.com/file/d/1RP4bgTFxDSc5Fl8z2YmSikVeLPW7A13T/view?usp=sharing" target="_blank" rel="noopener">View ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" style="background:var(--card);">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Skills</p>
+        <h2>Tools of the trade</h2>
+      </div>
+      <div class="skill-grid">
+        <div class="skill-group">
+          <span class="eyebrow">Languages &amp; core</span>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">C++</span><span class="chip">C#</span><span class="chip">Java</span><span class="chip">SQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="eyebrow">ML / DL frameworks</span>
+          <div class="chips">
+            <span class="chip">TensorFlow</span><span class="chip">scikit-learn</span><span class="chip">NLTK</span><span class="chip">Pandas / NumPy</span><span class="chip">Matplotlib / Seaborn</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="eyebrow">Research domains</span>
+          <div class="chips">
+            <span class="chip">NLP</span><span class="chip">Computer Vision</span><span class="chip">XAI (SHAP / LIME / Grad-CAM)</span><span class="chip">Statistics</span><span class="chip">Classification &amp; Segmentation</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="eyebrow">Tools &amp; platforms</span>
+          <div class="chips">
+            <span class="chip">Git / GitHub</span><span class="chip">Docker</span><span class="chip">GitLab</span><span class="chip">Selenium</span><span class="chip">BeautifulSoup</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Recommendations</p>
+        <h2>What collaborators say</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <p class="quote">"As first author on several journal submissions, he has demonstrated exceptional research ownership and technical proficiency in ML/DL/NLP through hands-on experience at Learnify Research Lab and Elite Research Lab. I strongly recommend him for industry R&amp;D, academic, or hybrid research positions."</p>
+          <div class="by"><b>Dr. Md. Saef Ullah Miah</b><span>Associate Professor, Additional Director (IQAC), AIUB</span></div>
+        </div>
+        <div class="testi-card">
+          <p class="quote">"With over two years of research experience, he is first author on multiple publications and demonstrates exceptional independence in his thesis work on explainability in Bangla commonsense reasoning. I am confident he will be a valuable contributor to any research or industrial position."</p>
+          <div class="by"><b>Dr. Md. Abdullah-Al-Jubair</b><span>Associate Professor &amp; Director, AIUB — Thesis Supervisor</span></div>
+        </div>
+        <div class="testi-card">
+          <p class="quote">"I have known him for several years. He is excellent in management. I strongly recommend him for any operational position."</p>
+          <div class="by"><b>Sheikh Mohammad Yousuf Hossain</b><span>Founder &amp; President, Youth School for Social Entrepreneurs</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="volunteering" style="background:var(--card);">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Volunteering</p>
+        <h2>Beyond the lab</h2>
+      </div>
+      <ul class="vol-list">
+        <li><span>United Nations Youth and Students Association of Bangladesh<span class="role"> — Associate Member &amp; Volunteer</span></span><a class="pub-link" href="https://www.tbsnews.net/economy/corporates/unysabs-eid-street-children-event-brings-joy-orphaned-and-special-needs-children" target="_blank" rel="noopener">Coverage ↗</a></li>
+        <li><span>AIUB English Club<span class="role"> — General Member &amp; Organizing Volunteer</span></span></li>
+        <li><span>IEEE AIUB Student Branch<span class="role"> — General Member</span></span><a class="pub-link" href="https://drive.google.com/file/d/1eEpM9m9lfwS1BNAgpdPnPVsH9X4V75cH/view?usp=drive_link" target="_blank" rel="noopener">View ↗</a></li>
+        <li><span>ESAB AIUB Unit<span class="role"> — Lifetime Member</span></span><a class="pub-link" href="https://drive.google.com/file/d/1jUyK__z1Net9gcl64oj8fxYLKADenuco/view?usp=sharing" target="_blank" rel="noopener">View ↗</a></li>
+        <li><span>National STEAM Olympiad<span class="role"> — Organizing Volunteer</span></span><a class="pub-link" href="https://nationalsteamolympiad.com/volunteer/profile/ODg=" target="_blank" rel="noopener">Profile ↗</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's talk research, roles, or collaborations</h2>
+      <div class="contact-grid">
+        <div class="contact-links">
+          <a href="mailto:hasnatzadid13@gmail.com">hasnatzadid13@gmail.com</a>
+          <span>LinkedIn — Talukder Hasnat Zadid</span>
+          <span>Facebook — Hasnat Zadid Shanto</span>
+        </div>
+        <p class="contact-note">Based in Dhaka, Bangladesh. Open to AI/ML research, RA, and software engineering roles — remote-friendly.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Talukder Hasnat Zadid</span>
+    <span>Built with HTML, CSS &amp; JS — no framework required</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+
+</body>
+</html>
